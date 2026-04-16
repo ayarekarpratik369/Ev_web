@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>EV Fault Predictor</title>
+
+
+<style>
+    body {
+        font-family: Arial;
+        background: #f0f0f0;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .box {
+        background: white;
+        padding: 20px;
+        width: 300px;
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    input {
+        width: 90%;
+        padding: 8px;
+        margin: 5px;
+    }
+
+    button {
+        padding: 10px;
+        width: 95%;
+        margin-top: 10px;
+        background: blue;
+        color: white;
+        border: none;
+    }
+
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<div class="box">
+    <h3>EV Fault Predictor</h3>
+
+
+<form action="/predict" method="post">
+    <input type="number" step="any" name="f1" placeholder="battery_temp" required>
+    <input type="number" step="any" name="f2" placeholder="cell_voltage_delta" required>
+    <input type="number" step="any" name="f3" placeholder="motor_temp" required>
+    <input type="number" step="any" name="f4" placeholder="temp_delta_battery_ambient" required>
+    <input type="number" step="any" name="f5" placeholder="cell_min_voltage" required>
+    <input type="number" step="any" name="f6" placeholder="thermal_runaway" required>
+    <input type="number" step="any" name="f7" placeholder="vibration_g" required>
+    <input type="number" step="any" name="f8" placeholder="smoke_ppm" required>
+    <input type="number" step="any" name="f9" placeholder="coolant_flow_lpm" required>
+    <input type="number" step="any" name="f10" placeholder="coolant_temp" required>
+
+    <button type="submit">Predict</button>
+</form>
+
+<div id="result"></div>
+
+
+</div>
+
+
+
+</body>
+</html>
