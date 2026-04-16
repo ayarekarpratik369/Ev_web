@@ -52,15 +52,15 @@
 
 
 <form action="/predict" method="post">
-    <input type="number" step="any" name="f1" placeholder="battery_temp" required>
-    <input type="number" step="any" name="f2" placeholder="cell_voltage_delta" required>
-    <input type="number" step="any" name="f3" placeholder="motor_temp" required>
+    <input type="number" step="any" name="f1" placeholder="battery_temp 0-120" required>
+    <input type="number" step="any" name="f2" placeholder="cell_voltage_delta " required>
+    <input type="number" step="any" name="f3" placeholder="motor_temp 16-160" required>
     <input type="number" step="any" name="f4" placeholder="temp_delta_battery_ambient" required>
-    <input type="number" step="any" name="f5" placeholder="cell_min_voltage" required>
+    <input type="number" step="any" name="f5" placeholder="cell_min_voltage 0-5" required>
     <input type="number" step="any" name="f6" placeholder="thermal_runaway" required>
     <input type="number" step="any" name="f7" placeholder="vibration_g" required>
-    <input type="number" step="any" name="f8" placeholder="smoke_ppm" required>
-    <input type="number" step="any" name="f9" placeholder="coolant_flow_lpm" required>
+    <input type="number" step="any" name="f8" placeholder="smoke_ppm 0-500" required>
+    <input type="number" step="any" name="f9" placeholder="coolant_flow_lpm 0-15" required>
     <input type="number" step="any" name="f10" placeholder="coolant_temp" required>
 
     <button type="submit">Predict</button>
